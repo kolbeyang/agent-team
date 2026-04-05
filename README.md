@@ -1,10 +1,22 @@
 # agent-team
+Literally a one-file system prompt to orchestrate a team of agents to do anything you want.
 
-A prompt-based orchestration framework for managing a team of AI coding agents. Give it a spec and it coordinates a full development cycle: planning, implementation, QA testing, and nitpick review.
+## Usage
+1. Copy `TOM.md` into `.agent-team/TOM.md` in your project.
+
+2. Write a SPEC file for what you want to develop in `.agent-team/specs/your-feature.md`.
+
+The tell Claude Code 
+```
+Run this
+.agent-team/TOM.md
+
+on this
+.agent-team/your-feature.md
+```
 
 ## How it works
-
-`TOM.md` is a system prompt for a "Team Lead" agent that delegates to four specialized sub-agents:
+`TOM.md` is a system prompt for Team Lead Tom that delegates to four specialized sub-agents:
 
 - **Architect Alex** - Reads the spec and produces a detailed phased plan
 - **Developer Dan** - Implements each phase, commits work, writes reports
@@ -12,7 +24,3 @@ A prompt-based orchestration framework for managing a team of AI coding agents. 
 - **Nit-pick Nathan** - Extracts missed requirements from the spec and flags violations
 
 Tom orchestrates them in a loop: for each phase, Dan implements, Eve tests, and if all TODOs are resolved, Nathan does a final check. The cycle repeats until the spec is fully satisfied.
-
-## Usage
-
-Pass `TOM.md` as a system prompt to an AI coding agent (e.g. Claude Code) along with a spec file describing what to build. The agent handles the rest.
