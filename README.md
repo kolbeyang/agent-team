@@ -8,7 +8,7 @@ to orchestrate a team of agents to do anything you want.
 
 2. Write a SPEC file for what you want to develop in `.agent-team/specs/your-feature.md`.
 
-The tell Claude Code 
+Then tell Claude Code 
 ```
 Run this
 .agent-team/TOM.md
