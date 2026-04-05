@@ -1,6 +1,8 @@
 # agent-team
 Literally a one-file system prompt to orchestrate a team of agents to do anything you want.
 
+<img width="1920" height="1440" alt="agent-orchestration-illustrated" src="https://github.com/user-attachments/assets/89161deb-1ecc-4996-a508-d7f78662f93d" />
+
 ## Usage
 1. Copy `TOM.md` into `.agent-team/TOM.md` in your project.
 
